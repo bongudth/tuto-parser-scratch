@@ -23,7 +23,10 @@ class Parser {
    *   ;   
    */
   Program() {
-    return this.NumericLiteral();
+    return {
+      type: 'Program',
+      body: this.NumericLiteral(),
+    };
   }
 
   /**
